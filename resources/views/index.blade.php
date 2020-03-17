@@ -1,4 +1,8 @@
 @extends('layouts.frontLayout.front_design')
+@section('header')
+    @include('layouts.frontLayout.front_header_index')
+
+@endsection
 @section('content')
 <!-- Start main-content -->
 <div class="main-content">
@@ -146,7 +150,7 @@
                                  data-responsive_offset="on"
                                  style="z-index: 7; min-width: 410px; max-width: 410px; max-width: 60px; max-width: 60px; white-space: normal;">A Premium Revolution Slider Template for your Website Highlights & Multi-Media Content.
                             </div>
-
+    
                             <!-- LAYER NR. 3 -->
                             <div class="tp-caption btn btn-default btn-transparent btn-flat btn-lg pl-40 pr-40 rs-parallaxlevel-0"
 

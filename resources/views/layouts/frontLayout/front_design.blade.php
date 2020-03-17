@@ -9,7 +9,7 @@
 	<meta name="description" content="CharityFund - Charity & Crowdfunding HTML Template" />
 	<meta name="keywords" content="building,business,construction,cleaning,transport,workshop" />
 	<meta name="author" content="ThemeMascot" />
-
+<head>
 	<!-- Page Title -->
 	<title>CrowdFundNepal</title>
 
@@ -66,10 +66,7 @@
 	<![endif]-->
 </head>
 
-
-
-@include('layouts.frontLayout.front_header')
-
+	@yield('header')
 @yield('content')
 		
 @include('layouts.frontLayout.front_footer')

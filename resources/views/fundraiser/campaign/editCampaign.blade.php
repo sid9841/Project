@@ -1,5 +1,6 @@
 @extends('layouts.frontLayout.front_design')
 @section('content')
+
     <!-- Start main-content -->
     <div class="main-content">
         <!-- Section: inner-header -->
@@ -9,10 +10,10 @@
                 <div class="section-content text-center">
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3 text-center">
-                            <h2 class="text-theme-colored font-36">Add Campagin</h2>
-                            <ol class="breadcrumb text-center mt-10 white">
+                            <h2 class="text-theme-colored font-36">Edit Campagin</h2>
+                            <ol class="breadcrumb text-centera mt-10 white">
                                 <li><a href="#">Home</a></li>
-                                <li class="active">Add Campaign</li>
+                                <li class="active">Edit Campaign</li>
                             </ol>
                         </div>
                     </div>
@@ -24,27 +25,29 @@
                 <div class="row">
                     <div class="col-md-6 col-md-push-3">
                         <div class="border-1px p-30 mb-0">
-                            <h3 class="text-theme-colored mt-0 pt-5"> Add New Campaign</h3>
+                            <h3 class="text-theme-colored mt-0 pt-5"> Edit Campaign</h3>
                             <hr>
                             <p></p>
-                            <form id="add-campaign" name="add-campaign" action="{{'addCampaign'}}" method="post" enctype="multipart/form-data" novalidate="novalidate">{{ csrf_field() }}
+                            <form id="edit-campaign" name="edit-campaign" action="{{url('/fundraiser/editCampaign/'.$campaignDetails->id)}}" method="post" enctype="multipart/form-data" novalidate="novalidate">{{ csrf_field() }}
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="title">Campaign Title <small>*</small></label>
-                                            <input id="title" name="title" type="text" placeholder="Enter Campaign Title" required="" class="form-control" aria-required="true">
+                                            <input id="title" name="title" type="text" placeholder="Enter Campaign Title" value="{{$campaignDetails->title}}" required="" class="form-control" aria-required="true">
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label for="goal_amount">Goal Amount <small>*</small></label>
-                                            <input id="goal_amount" name="goal_amount" class="form-control required " type="number" placeholder="0000" aria-required="true">
+                                            <input id="goal_amount" name="goal_amount" value="{{$campaignDetails->goal_amount}}" class="form-control required " type="number" placeholder="0000" aria-required="true">
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label for="currency">Currency <small>*</small></label>
                                             <select id="currency" name="currency" class="form-control">
+                                                <option value="{{$campaignDetails->currency}}" selected="selected" label="US dollar">USD</option>
+                                                <option disabled>──────────</option>
                                                 <option value="USD" selected="selected" label="US dollar">USD</option>
                                                 <option value="EUR" label="Euro">EUR</option>
                                                 <option value="JPY" label="Japanese yen">JPY</option>
@@ -219,7 +222,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="zip_code">Zip Code: <small>*</small></label>
-                                           <input type="text" name="zip_code" id="zip_code" class="form-control">
+                                           <input type="text" name="zip_code" value="{{$campaignDetails->zip_code}}" id="zip_code" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
@@ -237,19 +240,24 @@
                                     <label for="category_id">Category <small>*</small></label>
                                     <select class="form-control" name="category_id" id="category_id" aria-required="true">
                                         @foreach($category as $cat)
-                                            <option value="{{$cat->id}}">{{$cat->name}}</option>
+                                            @if($campaignDetails->category_id==$cat->id)
+                                            <option value="{{$cat->id}}" selected="selected">{{$cat->name}}</option>
+                                            @else
+                                                <option value="{{$cat->id}}">{{$cat->name}}</option>
+                                            @endif
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="description">Description <small>*</small></label>
-                                    <textarea id="description" name="description" class="form-control required" rows="5" placeholder="A short story about the cause" aria-required="true"></textarea>
+                                    <textarea id="description" name="description" class="form-control required" rows="5"  aria-required="true">{{$campaignDetails->description}}</textarea>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="campaign_image">Image Upload</label>
                                     <input id="campaign_image" name="campaign_image" class="file" type="file" multiple="" data-show-upload="false" data-show-caption="true">
                                     <small>Maximum upload file size: 12 MB</small>
+                                    <input id="current_image" name="current_image" class="file" type="hidden" multiple="" data-show-upload="false" data-show-caption="true">
                                 </div>
                                 <div class="form-group">
                                     <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">

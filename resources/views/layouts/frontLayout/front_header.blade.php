@@ -1,68 +1,46 @@
 <body class="has-side-panel side-panel-left fullwidth-page side-push-panel">
 <div class="body-overlay"></div>
-<div id="side-panel" class="dark" data-bg-img="images/bg/bg8.jpg">
-	<div class="side-panel-wrap">
-		<div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><i class="icon_close font-30"></i></a></div>
-		<a href="javascript:void(0)"><img alt="logo" src="images/logo-wide.png"></a>
-		<div class="side-panel-nav mt-30">
-			<div class="widget no-border">
-				<nav>
-					<ul class="nav nav-list">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a class="tree-toggler nav-header">Pages <i class="fa fa-angle-down"></i></a>
-							<ul class="nav nav-list tree">
-								<li><a href="#">About</a></li>
-								<li><a href="#">Terms</a></li>
-								<li><a href="#">FAQ</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-		<div class="side-panel-widget mt-30">
-			<div class="widget no-border">
-				<ul>
-					<li class="font-14 mb-5"> <i class="fa fa-phone text-theme-colored"></i> <a href="#" class="text-gray">123-456-789</a> </li>
-					<li class="font-14 mb-5"> <i class="fa fa-clock-o text-theme-colored"></i> Mon-Fri 8:00 to 2:00 </li>
-					<li class="font-14 mb-5"> <i class="fa fa-envelope-o text-theme-colored"></i> <a href="#" class="text-gray">contact@yourdomain.com</a> </li>
-				</ul>
-			</div>
-			<div class="widget">
-				<ul class="styled-icons icon-dark icon-theme-colored icon-sm">
-					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-				</ul>
-			</div>
-			<p>Copyright &copy;2016 ThemeMascot</p>
-		</div>
-	</div>
-</div>
 <div id="wrapper" class="clearfix">
 
 
-	<!-- Header -->
 	<header id="header" class="header">
-		<div class="header-nav navbar-fixed-top header-dark navbar-white navbar-transparent navbar-sticky-animated animated-active">
-			<div class="header-nav-wrapper">
+		<div class="header-top bg-deep sm-text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="widget no-border m-0">
+							<ul class="styled-icons icon-sm sm-text-center">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="widget no-border m-0">
+							<ul class="list-inline text-right sm-text-center mt-5">
+								<li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored"></i> <a class="text-gray" href="#">123-456-789</a> </li>
+								<li class="m-0 pl-10 pr-10"> <i class="fa fa-clock-o text-theme-colored"></i> Mon-Fri 8:00 to 2:00 </li>
+								<li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored"></i> <a class="text-gray" href="#">contact@yourdomain.com</a> </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-nav">
+			<div class="header-nav-wrapper navbar-scroll bg-lightest" style="z-index: auto; position: static; top: auto;">
 				<div class="container">
-					<nav id="menuzord-right" class="menuzord orange">
+					<nav id="menuzord-right" class="menuzord orange bg-lightest menuzord-responsive"><a href="javascript:void(0)" class="showhide" style="display: none;"><em></em><em></em><em></em></a>
 						<a class="menuzord-brand" href="javascript:void(0)">
-							<img src="images/logo-wide.png" alt="">
+							<img src="{{asset('images/logo-wide.png')}}" alt="">
 						</a>
-						<div id="side-panel-trigger" class="side-panel-trigger"></div>
-						<ul class="menuzord-menu">
-							<li><a href="{{'login'}}">Login</a></li>
-						</ul>
-						<ul class="menuzord-menu">
-							<li class="active"><a href="#home">Home</a>
-								<ul class="dropdown">
-									<li><a href="#">Multipage Layout</a>fa
-										<ul class="dropdown">
+						<ul class="menuzord-menu menuzord-right menuzord-indented scrollable" style="max-height: 400px;">
+							<li class="active"><a href="#home">Home<span class="indicator"><i class="fa fa-angle-down"></i></span></a>
+								<ul class="dropdown" style="right: auto; display: none;">
+									<li><a href="#">Multipage Layout<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="index-mp-layout1.html">Multipage Layout1</a></li>
 											<li><a href="index-mp-layout2.html">Multipage Layout2</a></li>
 											<li><a href="index-mp-layout3.html">Multipage Layout3</a></li>
@@ -73,8 +51,8 @@
 											<li><a href="index-mp-layout8.html">Multipage Layout8</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Singlepage Layout</a>
-										<ul class="dropdown">
+									<li><a href="#">Singlepage Layout<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="index-sp-layout1.html">Singlepage Layout1</a></li>
 											<li><a href="index-sp-layout2.html">Singlepage Layout2</a></li>
 											<li><a href="index-sp-layout3.html">Singlepage Layout3</a></li>
@@ -85,8 +63,8 @@
 											<li><a href="index-sp-layout8.html">Singlepage Layout8</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Boxed Multipage Layout</a>
-										<ul class="dropdown">
+									<li><a href="#">Boxed Multipage Layout<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="index-boxed-mp-layout1.html">Boxed Multipage Layout1</a></li>
 											<li><a href="index-boxed-mp-layout2.html">Boxed Multipage Layout2</a></li>
 											<li><a href="index-boxed-mp-layout3.html">Boxed Multipage Layout3</a></li>
@@ -97,8 +75,8 @@
 											<li><a href="index-boxed-mp-layout8.html">Boxed Multipage Layout8</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Boxed Single Layout</a>
-										<ul class="dropdown">
+									<li><a href="#">Boxed Single Layout<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="index-boxed-sp-layout1.html">Boxed Singlepage Layout1</a></li>
 											<li><a href="index-boxed-sp-layout2.html">Boxed Singlepage Layout2</a></li>
 											<li><a href="index-boxed-sp-layout3.html">Boxed Singlepage Layout3</a></li>
@@ -109,33 +87,33 @@
 											<li><a href="index-boxed-sp-layout8.html">Boxed Singlepage Layout8</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Menu Full Page Layout</a>
-										<ul class="dropdown">
+									<li><a href="#">Menu Full Page Layout<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="index-menu-full-page-mp.html">Multipage</a></li>
 											<li><a href="index-menu-full-page-sp.html">Singlepage</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Vertical Layout</a>
-										<ul class="dropdown">
+									<li><a href="#">Vertical Layout<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="index-vertical-nav-layout-mp.html">Multipage</a></li>
 											<li><a href="index-vertical-nav-layout-sp.html">Singlepage</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Magazine Home Layouts <span class="label label-warning">New</span></a>
-										<ul class="dropdown">
+									<li><a href="#">Magazine Home Layouts <span class="label label-warning">New</span><span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="index-hot-magazine-home-layout1.html">Magazine Home layout1</a></li>
 											<li><a href="index-hot-magazine-home-layout2.html">Magazine Home layout2</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Portfolio Home Layouts <span class="label label-warning">New</span></a>
-										<ul class="dropdown">
+									<li><a href="#">Portfolio Home Layouts <span class="label label-warning">New</span><span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="index-hot-portfolio-presentation-layout1.html">Portfolio Presentation Layout1</a></li>
 											<li><a href="index-hot-portfolio-presentation-layout2.html">Portfolio Presentation Layout2</a></li>
 											<li><a href="index-hot-portfolio-presentation-layout3.html">Portfolio Presentation Layout3</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Hot Layouts <span class="label label-warning">New</span></a>
-										<ul class="dropdown">
+									<li><a href="#">Hot Layouts <span class="label label-warning">New</span><span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="index-hot-slider-fullpage-home.html">Fullscreen Home Layout</a></li>
 											<li><a href="index-hot-magazine-home-layout1.html">Magazine Home Layout 1</a></li>
 											<li><a href="index-hot-magazine-home-layout2.html">Magazine Home Layout 2</a></li>
@@ -152,18 +130,18 @@
 										</ul>
 									</li>
 									<li><a href="index-hot-shop-home.html">Shop Home <span class="label label-warning">New</span></a></li>
-									<li><a href="#">Home Variations</a>
-										<ul class="dropdown">
-											<li><a href="#">Rev Slider</a>
-												<ul class="dropdown">
+									<li><a href="#">Home Variations<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
+											<li><a href="#">Rev Slider<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="index-home-variation-revslider-style1.html">Layout1</a></li>
 													<li><a href="index-home-variation-revslider-style2.html">Layout2</a></li>
 													<li><a href="index-home-variation-revslider-style3.html">Layout3</a></li>
 												</ul>
 											</li>
 											<li><a href="index-home-variation-layerslider.html">Layer Slider</a></li>
-											<li><a href="#">Maximage Slider</a>
-												<ul class="dropdown">
+											<li><a href="#">Maximage Slider<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="index-home-variation-maximageslider-style1.html">Layout1</a></li>
 													<li><a href="index-home-variation-maximageslider-style2.html">Layout2</a></li>
 													<li><a href="index-home-variation-maximageslider-style3.html">Layout3</a></li>
@@ -175,16 +153,16 @@
 											<li><a href="index-home-variation-html5-video.html">Html5 Background Video</a></li>
 											<li><a href="index-home-variation-bg-image-parallax.html">Bg Image Parallax Layout</a></li>
 											<li><a href="index-home-variation-bg-static.html">Bg Static Layout</a></li>
-											<li><a href="#">Home Appointment Form</a>
-												<ul class="dropdown">
+											<li><a href="#">Home Appointment Form<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="index-home-variation-appointment-form-style1.html">Layout1</a></li>
 													<li><a href="index-home-variation-appointment-form-style2.html">Layout2</a></li>
 												</ul>
 											</li>
 										</ul>
 									</li>
-									<li><a href="#">Dark Layout</a>
-										<ul class="dropdown">
+									<li><a href="#">Dark Layout<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="index-dark-mp-layout1.html">Dark Multipage Layout1</a></li>
 											<li><a href="index-dark-mp-layout2.html">Dark Multipage Layout2</a></li>
 											<li><a href="index-dark-mp-layout3.html">Dark Multipage Layout3</a></li>
@@ -195,8 +173,8 @@
 											<li><a href="index-dark-mp-layout8.html">Dark Multipage Layout8</a></li>
 										</ul>
 									</li>
-									<li><a href="#">RTL Layout</a>
-										<ul class="dropdown">
+									<li><a href="#">RTL Layout<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="index-rtl-mp-layout1.html">RTL Multipage Layout1</a></li>
 											<li><a href="index-rtl-mp-layout2.html">RTL Multipage Layout2</a></li>
 											<li><a href="index-rtl-mp-layout3.html">RTL Multipage Layout3</a></li>
@@ -209,11 +187,11 @@
 									</li>
 								</ul>
 							</li>
-							<li><a href="#">Features</a>
-								<ul class="dropdown">
+							<li><a href="#">Features<span class="indicator"><i class="fa fa-angle-down"></i></span></a>
+								<ul class="dropdown" style="right: auto; display: none;">
 									<li><a href="features-preloader.html">Preloaders</a></li>
-									<li><a href="#">Header</a>
-										<ul class="dropdown">
+									<li><a href="#">Header<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="features-header-style1.html">Header Style1</a></li>
 											<li><a href="features-header-style2.html">Header Style2</a></li>
 											<li><a href="features-header-style3.html">Header Style3</a></li>
@@ -224,8 +202,8 @@
 											<li><a href="features-header-vertical-nav.html">Vertical Header <span class="label label-success">New</span></a></li>
 										</ul>
 									</li>
-									<li><a href="#">Page Title <span class="label label-success">New</span></a>
-										<ul class="dropdown">
+									<li><a href="#">Page Title <span class="label label-success">New</span><span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="features-page-title-text-left.html">Text Left</a></li>
 											<li><a href="features-page-title-text-center.html">Text Center</a></li>
 											<li><a href="features-page-title-text-right.html">Text Right</a></li>
@@ -239,16 +217,16 @@
 											<li><a href="features-page-title-full-transparent.html">Full Transparent</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Side Push Panel</a>
-										<ul class="dropdown">
+									<li><a href="#">Side Push Panel<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="features-side-push-panel-left-overlay.html">Left Overlay</a></li>
 											<li><a href="features-side-push-panel-left-push.html">Left Push</a></li>
 											<li><a href="features-side-push-panel-right-overlay.html">Right Overlay</a></li>
 											<li><a href="features-side-push-panel-right-push.html">Right Push</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Menu Style <span class="label label-success">New</span></a>
-										<ul class="dropdown">
+									<li><a href="#">Menu Style <span class="label label-success">New</span><span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="features-menu-style-border-top.html">Border Top</a></li>
 											<li><a href="features-menu-style-border-bottom.html">Border Bottom</a></li>
 											<li><a href="features-menu-style-border-boxed.html">Border Boxed</a></li>
@@ -266,22 +244,22 @@
 											<li><a href="features-menu-style-top-bottom-boxed-border.html">Top Bottom Boxed Border</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Sliders</a>
-										<ul class="dropdown">
-											<li><a href="#">Revolution Slider</a>
-												<ul class="dropdown">
+									<li><a href="#">Sliders<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
+											<li><a href="#">Revolution Slider<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="features-home-revslider.html">Revolution Slider</a></li>
 													<li><a href="features-rev-slider-premium-templates.html">Revolution Slider All In One</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Layer Slider <span class="label label-success">New</span></a>
-												<ul class="dropdown">
+											<li><a href="#">Layer Slider <span class="label label-success">New</span><span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="features-home-layerslider.html">Layer Slider</a></li>
 													<li><a href="features-layerslider-slider-premium-templates.html">Layer Slider All In One</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Master Slider <span class="label label-success">New</span></a>
-												<ul class="dropdown">
+											<li><a href="#">Master Slider <span class="label label-success">New</span><span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="features-home-master-slider-with-animated-layers.html">Master Slider</a></li>
 													<li><a href="features-master-slider-premium-templates.html">Master Slider All In One</a></li>
 												</ul>
@@ -292,33 +270,33 @@
 											<li><a href="features-home-video-bg.html">Video Image Bg</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Form</a>
-										<ul class="dropdown">
-											<li><a href="#">Contact Form</a>
-												<ul class="dropdown">
+									<li><a href="#">Form<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
+											<li><a href="#">Contact Form<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="page-contact1.html">Form style 1</a></li>
 													<li><a href="page-contact2.html">Form style 2</a></li>
 													<li><a href="page-contact3.html">Form style 3</a></li>
 													<li><a href="page-contact4.html">Form style 4</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Login/Register Form</a>
-												<ul class="dropdown">
-													<li><a href="#">Login/Register</a>
-														<ul class="dropdown">
+											<li><a href="#">Login/Register Form<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
+													<li><a href="#">Login/Register<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+														<ul class="dropdown" style="">
 															<li><a href="form-login-register-style1.html">Form style 1</a></li>
 															<li><a href="form-login-register-style2.html">Form style 2</a></li>
 														</ul>
 													</li>
-													<li><a href="#">Login</a>
-														<ul class="dropdown">
+													<li><a href="#">Login<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+														<ul class="dropdown" style="">
 															<li><a href="form-login-style1.html">Form style 1</a></li>
 															<li><a href="form-login-style2.html">Form style 2</a></li>
 															<li><a href="form-login-style3.html">Form style 3</a></li>
 														</ul>
 													</li>
-													<li><a href="#">Register</a>
-														<ul class="dropdown">
+													<li><a href="#">Register<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+														<ul class="dropdown" style="">
 															<li><a href="form-register-style1.html">Form style 1</a></li>
 															<li><a href="form-register-style2.html">Form style 2</a></li>
 															<li><a href="form-register-style3.html">Form style 3</a></li>
@@ -326,27 +304,27 @@
 													</li>
 												</ul>
 											</li>
-											<li><a href="#">Subscribe Form</a>
-												<ul class="dropdown">
+											<li><a href="#">Subscribe Form<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="form-subscribe.html">Form style 1</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Appointment Form</a>
-												<ul class="dropdown">
+											<li><a href="#">Appointment Form<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="form-appointment-style1.html">Form style 1</a></li>
 													<li><a href="form-appointment-style2.html">Form style 2</a></li>
 													<li><a href="form-appointment-style3.html">Form style 3</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Job Apply Form</a>
-												<ul class="dropdown">
+											<li><a href="#">Job Apply Form<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="form-job-apply-style1.html">Form style 1</a></li>
 													<li><a href="form-job-apply-style2.html">Form style 2</a></li>
 													<li><a href="form-job-apply-style3.html">Form style 3</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Quick Contact Form</a>
-												<ul class="dropdown">
+											<li><a href="#">Quick Contact Form<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="form-quick-contact-style1.html">Form style 1</a></li>
 													<li><a href="form-quick-contact-style2.html">Form style 2</a></li>
 													<li><a href="form-quick-contact-style3.html">Form style 3</a></li>
@@ -354,10 +332,10 @@
 											</li>
 										</ul>
 									</li>
-									<li><a href="#">Paypal Form <span class="label label-success">New</span></a>
-										<ul class="dropdown">
-											<li><a href="#">Donation Onetime</a>
-												<ul class="dropdown">
+									<li><a href="#">Paypal Form <span class="label label-success">New</span><span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
+											<li><a href="#">Donation Onetime<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="form-paypal-donate-onetime-style1.html">Style1</a></li>
 													<li><a href="form-paypal-donate-onetime-style2.html">Style2</a></li>
 													<li><a href="form-paypal-donate-onetime-style3.html">Style3</a></li>
@@ -367,8 +345,8 @@
 													<li><a href="form-paypal-donate-onetime-style7.html">Style7</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Donation Recurring</a>
-												<ul class="dropdown">
+											<li><a href="#">Donation Recurring<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="form-paypal-donate-recurring-style1.html">Style1</a></li>
 													<li><a href="form-paypal-donate-recurring-style2.html"> Style2</a></li>
 													<li><a href="form-paypal-donate-recurring-style3.html">Style3</a></li>
@@ -376,8 +354,8 @@
 													<li><a href="form-paypal-donate-recurring-style5.html">Style5</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Both Onetime/Recurring</a>
-												<ul class="dropdown">
+											<li><a href="#">Both Onetime/Recurring<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="form-paypal-donate-both-onetime-recurring-style1.html">Style1</a></li>
 													<li><a href="form-paypal-donate-both-onetime-recurring-style2.html">Style2</a></li>
 													<li><a href="form-paypal-donate-both-onetime-recurring-style3.html">Style3</a></li>
@@ -390,16 +368,16 @@
 											<li><a href="form-paypal-order-style2.html">Order Payment Style2</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Popup Promo Box <span class="label label-success">New</span></a>
-										<ul class="dropdown">
+									<li><a href="#">Popup Promo Box <span class="label label-success">New</span><span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="features-popup-promo-box.html">Default</a></li>
 											<li><a href="features-popup-promo-box-cookie-enabled.html">Cookie Enabled</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Footer</a>
-										<ul class="dropdown">
-											<li><a href="#">Footer Dark</a>
-												<ul class="dropdown">
+									<li><a href="#">Footer<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
+											<li><a href="#">Footer Dark<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="features-footer-dark-style1.html#footer">Footer Dark One</a></li>
 													<li><a href="features-footer-dark-style2.html#footer">Footer Dark Two</a></li>
 													<li><a href="features-footer-dark-style3.html#footer">Footer Dark Three</a></li>
@@ -408,8 +386,8 @@
 													<li><a href="features-footer-dark-style6.html#footer">Footer Dark Six</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Footer White</a>
-												<ul class="dropdown">
+											<li><a href="#">Footer White<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="features-footer-white-style1.html#footer">Footer White One</a></li>
 													<li><a href="features-footer-white-style2.html#footer">Footer White Two</a></li>
 													<li><a href="features-footer-white-style3.html#footer">Footer White Three</a></li>
@@ -422,11 +400,11 @@
 									</li>
 								</ul>
 							</li>
-							<li><a href="#">Pages</a>
-								<ul class="dropdown">
+							<li><a href="#">Pages<span class="indicator"><i class="fa fa-angle-down"></i></span></a>
+								<ul class="dropdown" style="right: auto; display: none;">
 									<li><a href="page-become-a-volunteer.html">Become a Volunteer</a></li>
-									<li><a href="#">Shop <span class="label label-success">New</span></a>
-										<ul class="dropdown">
+									<li><a href="#">Shop <span class="label label-success">New</span><span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="shop-category.html">Category</a></li>
 											<li><a href="shop-category-sidebar.html">Category Sidebar</a></li>
 											<li><a href="shop-product-details.html">Product Details</a></li>
@@ -434,21 +412,21 @@
 											<li><a href="shop-checkout.html">Checkout</a></li>
 										</ul>
 									</li>
-									<li><a href="#">About</a>
-										<ul class="dropdown">
+									<li><a href="#">About<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="page-about1.html">About Style1</a></li>
 											<li><a href="page-about2.html">About Style2</a></li>
 											<li><a href="page-about3.html">About Style3</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Services</a>
-										<ul class="dropdown">
+									<li><a href="#">Services<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="page-services1.html">Services Style1</a></li>
 											<li><a href="page-services2.html">Services Style2</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Gallery <span class="label label-warning">New</span></a>
-										<ul class="dropdown">
+									<li><a href="#">Gallery <span class="label label-warning">New</span><span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="page-gallery-3col.html">3 Columns</a></li>
 											<li><a href="page-gallery-3col-only-image.html">3 Columns Only Image</a></li>
 											<li><a href="page-gallery-4col.html">4 Columns</a></li>
@@ -462,16 +440,16 @@
 											<li><a href="page-gallery-prettyphoto.html">Pretty Photo Gallery</a></li>
 										</ul>
 									</li>
-									<li><a href="#">FAQ</a>
-										<ul class="dropdown">
+									<li><a href="#">FAQ<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="page-faq-style1.html">FAQ Style1</a></li>
 											<li><a href="page-faq-style2.html">FAQ Style2</a></li>
 											<li><a href="page-faq-style3.html">FAQ Style3</a></li>
 											<li><a href="page-faq-style4.html">FAQ Style4</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Contact</a>
-										<ul class="dropdown">
+									<li><a href="#">Contact<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="page-contact1.html">Contact Style1</a></li>
 											<li><a href="page-contact2.html">Contact Style2</a></li>
 											<li><a href="page-contact3.html">Contact Style3</a></li>
@@ -480,22 +458,22 @@
 											<li><a href="page-contact6-with-multiple-marker.html">Contact 6 - Multiple Marker</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Calender</a>
-										<ul class="dropdown">
+									<li><a href="#">Calender<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="page-calender1.html">Calender Style1</a></li>
 											<li><a href="page-calender2.html">Calender Style2</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Events</a>
-										<ul class="dropdown">
-											<li><a href="#">Events Calendar</a>
-												<ul class="dropdown">
+									<li><a href="#">Events<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
+											<li><a href="#">Events Calendar<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="events-calendar-style1.html">Calendar Style1</a></li>
 													<li><a href="events-calendar-style2.html">Calendar Style1</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Events Grid</a>
-												<ul class="dropdown">
+											<li><a href="#">Events Grid<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="events-grid-2column.html">Grid 2column</a></li>
 													<li><a href="events-grid-3column.html">Grid 3column</a></li>
 													<li><a href="events-grid-4column.html">Grid 4column</a></li>
@@ -503,15 +481,15 @@
 													<li><a href="events-grid-right-sidebar.html">Grid Right Sidebar</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Events List</a>
-												<ul class="dropdown">
+											<li><a href="#">Events List<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="events-list-left-sidebar.html">List Left Sidebar</a></li>
 													<li><a href="events-list-right-sidebar.html">List Right Sidebar</a></li>
 													<li><a href="events-list-no-sidebar.html">List No Sidebar</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Events Details</a>
-												<ul class="dropdown">
+											<li><a href="#">Events Details<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="events-details-style1.html">Details Style1</a></li>
 													<li><a href="events-details-style2.html">Details Style2</a></li>
 													<li><a href="events-details-style3.html">Details Style3</a></li>
@@ -520,48 +498,48 @@
 											<li><a href="events-table.html">Events Table</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Causes</a>
-										<ul class="dropdown">
+									<li><a href="#">Causes<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="page-cause-list.html">Cause List</a></li>
 											<li><a href="page-cause-grid.html">Cause Grid</a></li>
 											<li><a href="page-cause-details.html">Cause Details</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Job <span class="label label-success">New</span></a>
-										<ul class="dropdown">
+									<li><a href="#">Job <span class="label label-success">New</span><span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="job-list.html">Job List</a></li>
 											<li><a href="job-details-style1.html">Job Details Style1</a></li>
 											<li><a href="job-details-style2.html">Job Details Style2</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Pricing</a>
-										<ul class="dropdown">
+									<li><a href="#">Pricing<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="page-pricing1.html">Pricing Style1</a></li>
 											<li><a href="page-pricing2.html">Pricing Style2</a></li>
 										</ul>
 									</li>
-									<li><a href="page-about4.html">Page with Sidebar</a>
-										<ul class="dropdown">
+									<li><a href="page-about4.html">Page with Sidebar<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="page-sidebar-right.html">Page Right Sidebar</a></li>
 											<li><a href="page-sidebar-left.html">Page Left Sidebar</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Page 404</a>
-										<ul class="dropdown">
+									<li><a href="#">Page 404<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="page-404-style1.html">Style1</a></li>
 											<li><a href="page-404-style2.html">Style2</a></li>
 											<li><a href="page-404-style3.html">Style3</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Under Construction</a>
-										<ul class="dropdown">
+									<li><a href="#">Under Construction<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="page-under-construction-style1.html">Style1</a></li>
 											<li><a href="page-under-construction-style2.html">Style2</a></li>
 											<li><a href="page-under-construction-style3.html">Style3</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Coming Soon</a>
-										<ul class="dropdown">
+									<li><a href="#">Coming Soon<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="page-coming-soon-style1.html">Style1</a></li>
 											<li><a href="page-coming-soon-style2.html">Style2</a></li>
 											<li><a href="page-coming-soon-style3.html">Style3</a></li>
@@ -569,12 +547,12 @@
 									</li>
 								</ul>
 							</li>
-							<li><a href="#">Portfolio<span class="label label-warning">New</span></a>
-								<ul class="dropdown">
-									<li><a href="#">Boxed</a>
-										<ul class="dropdown">
-											<li><a href="#">Gutter</a>
-												<ul class="dropdown">
+							<li><a href="#">Portfolio<span class="label label-warning">New</span><span class="indicator"><i class="fa fa-angle-down"></i></span></a>
+								<ul class="dropdown" style="right: auto; display: none;">
+									<li><a href="#">Boxed<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
+											<li><a href="#">Gutter<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-boxed-gutter-1-col.html">1 Column</a></li>
 													<li><a href="portfolio-boxed-gutter-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-boxed-gutter-3-col.html">3 Columns</a></li>
@@ -587,8 +565,8 @@
 													<li><a href="portfolio-boxed-gutter-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Gutter Less</a>
-												<ul class="dropdown">
+											<li><a href="#">Gutter Less<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-boxed-1-col.html">1 Column</a></li>
 													<li><a href="portfolio-boxed-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-boxed-3-col.html">3 Columns</a></li>
@@ -601,8 +579,8 @@
 													<li><a href="portfolio-boxed-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Title - Gutter</a>
-												<ul class="dropdown">
+											<li><a href="#">Title - Gutter<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-boxed-title-gutter-1-col.html">1 Column</a></li>
 													<li><a href="portfolio-boxed-title-gutter-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-boxed-title-gutter-3-col.html">3 Columns</a></li>
@@ -615,8 +593,8 @@
 													<li><a href="portfolio-boxed-title-gutter-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Title - Gutter Less</a>
-												<ul class="dropdown">
+											<li><a href="#">Title - Gutter Less<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-boxed-title-1-col.html">1 Column</a></li>
 													<li><a href="portfolio-boxed-title-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-boxed-title-3-col.html">3 Columns</a></li>
@@ -631,10 +609,10 @@
 											</li>
 										</ul>
 									</li>
-									<li><a href="#">Wide</a>
-										<ul class="dropdown">
-											<li><a href="#">Gutter</a>
-												<ul class="dropdown">
+									<li><a href="#">Wide<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
+											<li><a href="#">Gutter<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-wide-gutter-1-col.html">1 Column</a></li>
 													<li><a href="portfolio-wide-gutter-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-wide-gutter-3-col.html">3 Columns</a></li>
@@ -647,8 +625,8 @@
 													<li><a href="portfolio-wide-gutter-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Gutter Less</a>
-												<ul class="dropdown">
+											<li><a href="#">Gutter Less<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-wide-1-col.html">1 Column</a></li>
 													<li><a href="portfolio-wide-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-wide-3-col.html">3 Columns</a></li>
@@ -661,8 +639,8 @@
 													<li><a href="portfolio-wide-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Title - Gutter</a>
-												<ul class="dropdown">
+											<li><a href="#">Title - Gutter<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-wide-title-gutter-1-col.html">1 Column</a></li>
 													<li><a href="portfolio-wide-title-gutter-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-wide-title-gutter-3-col.html">3 Columns</a></li>
@@ -675,8 +653,8 @@
 													<li><a href="portfolio-wide-title-gutter-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Title - Gutter Less</a>
-												<ul class="dropdown">
+											<li><a href="#">Title - Gutter Less<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-wide-title-1-col.html">1 Column</a></li>
 													<li><a href="portfolio-wide-title-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-wide-title-3-col.html">3 Columns</a></li>
@@ -691,10 +669,10 @@
 											</li>
 										</ul>
 									</li>
-									<li><a href="#">Masonry Boxed</a>
-										<ul class="dropdown">
-											<li><a href="#">Gutter</a>
-												<ul class="dropdown">
+									<li><a href="#">Masonry Boxed<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
+											<li><a href="#">Gutter<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-masonry-boxed-gutter-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-masonry-boxed-gutter-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-masonry-boxed-gutter-4-col.html">4 Columns</a></li>
@@ -706,8 +684,8 @@
 													<li><a href="portfolio-masonry-boxed-gutter-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Gutter Less</a>
-												<ul class="dropdown">
+											<li><a href="#">Gutter Less<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-masonry-boxed-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-masonry-boxed-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-masonry-boxed-4-col.html">4 Columns</a></li>
@@ -719,8 +697,8 @@
 													<li><a href="portfolio-masonry-boxed-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Title - Gutter</a>
-												<ul class="dropdown">
+											<li><a href="#">Title - Gutter<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-masonry-boxed-gutter-title-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-masonry-boxed-gutter-title-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-masonry-boxed-gutter-title-4-col.html">4 Columns</a></li>
@@ -732,8 +710,8 @@
 													<li><a href="portfolio-masonry-boxed-gutter-title-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Title - Gutter Less</a>
-												<ul class="dropdown">
+											<li><a href="#">Title - Gutter Less<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-masonry-boxed-title-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-masonry-boxed-title-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-masonry-boxed-title-4-col.html">4 Columns</a></li>
@@ -747,10 +725,10 @@
 											</li>
 										</ul>
 									</li>
-									<li><a href="#">Masonry Wide</a>
-										<ul class="dropdown">
-											<li><a href="#">Gutter</a>
-												<ul class="dropdown">
+									<li><a href="#">Masonry Wide<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
+											<li><a href="#">Gutter<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-masonry-wide-gutter-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-masonry-wide-gutter-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-masonry-wide-gutter-4-col.html">4 Columns</a></li>
@@ -762,8 +740,8 @@
 													<li><a href="portfolio-masonry-wide-gutter-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Gutter Less</a>
-												<ul class="dropdown">
+											<li><a href="#">Gutter Less<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-masonry-wide-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-masonry-wide-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-masonry-wide-4-col.html">4 Columns</a></li>
@@ -775,8 +753,8 @@
 													<li><a href="portfolio-masonry-wide-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Title - Title - Gutter</a>
-												<ul class="dropdown">
+											<li><a href="#">Title - Title - Gutter<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-masonry-wide-gutter-title-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-masonry-wide-gutter-title-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-masonry-wide-gutter-title-4-col.html">4 Columns</a></li>
@@ -788,8 +766,8 @@
 													<li><a href="portfolio-masonry-wide-gutter-title-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Title - Title - Gutter Less</a>
-												<ul class="dropdown">
+											<li><a href="#">Title - Title - Gutter Less<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-masonry-wide-title-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-masonry-wide-title-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-masonry-wide-title-4-col.html">4 Columns</a></li>
@@ -803,10 +781,10 @@
 											</li>
 										</ul>
 									</li>
-									<li><a href="#">Tiles Boxed</a>
-										<ul class="dropdown">
-											<li><a href="#">Gutter</a>
-												<ul class="dropdown">
+									<li><a href="#">Tiles Boxed<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
+											<li><a href="#">Gutter<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-tiles-boxed-gutter-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-tiles-boxed-gutter-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-tiles-boxed-gutter-4-col.html">4 Columns</a></li>
@@ -818,8 +796,8 @@
 													<li><a href="portfolio-tiles-boxed-gutter-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Gutter Less</a>
-												<ul class="dropdown">
+											<li><a href="#">Gutter Less<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-tiles-boxed-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-tiles-boxed-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-tiles-boxed-4-col.html">4 Columns</a></li>
@@ -831,8 +809,8 @@
 													<li><a href="portfolio-tiles-boxed-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Title - Gutter</a>
-												<ul class="dropdown">
+											<li><a href="#">Title - Gutter<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-tiles-boxed-title-gutter-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-tiles-boxed-title-gutter-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-tiles-boxed-title-gutter-4-col.html">4 Columns</a></li>
@@ -844,8 +822,8 @@
 													<li><a href="portfolio-tiles-boxed-title-gutter-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Title - Gutter Less</a>
-												<ul class="dropdown">
+											<li><a href="#">Title - Gutter Less<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-tiles-boxed-title-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-tiles-boxed-title-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-tiles-boxed-title-4-col.html">4 Columns</a></li>
@@ -859,10 +837,10 @@
 											</li>
 										</ul>
 									</li>
-									<li><a href="#">Tiles Wide</a>
-										<ul class="dropdown">
-											<li><a href="#">Gutter</a>
-												<ul class="dropdown">
+									<li><a href="#">Tiles Wide<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
+											<li><a href="#">Gutter<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-tiles-wide-gutter-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-tiles-wide-gutter-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-tiles-wide-gutter-4-col.html">4 Columns</a></li>
@@ -874,8 +852,8 @@
 													<li><a href="portfolio-tiles-wide-gutter-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Gutter Less</a>
-												<ul class="dropdown">
+											<li><a href="#">Gutter Less<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-tiles-wide-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-tiles-wide-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-tiles-wide-4-col.html">4 Columns</a></li>
@@ -887,8 +865,8 @@
 													<li><a href="portfolio-tiles-wide-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Title - Gutter</a>
-												<ul class="dropdown">
+											<li><a href="#">Title - Gutter<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-tiles-wide-title-gutter-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-tiles-wide-title-gutter-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-tiles-wide-title-gutter-4-col.html">4 Columns</a></li>
@@ -900,8 +878,8 @@
 													<li><a href="portfolio-tiles-wide-title-gutter-10-col.html">10 Columns</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Title - Gutter Less</a>
-												<ul class="dropdown">
+											<li><a href="#">Title - Gutter Less<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+												<ul class="dropdown" style="">
 													<li><a href="portfolio-tiles-wide-title-2-col.html">2 Columns</a></li>
 													<li><a href="portfolio-tiles-wide-title-3-col.html">3 Columns</a></li>
 													<li><a href="portfolio-tiles-wide-title-4-col.html">4 Columns</a></li>
@@ -915,16 +893,16 @@
 											</li>
 										</ul>
 									</li>
-									<li><a href="#">Loading Styles</a>
-										<ul class="dropdown">
+									<li><a href="#">Loading Styles<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="portfolio-extra-infinity-scroll.html">Infinity Scroll</a></li>
 											<li><a href="portfolio-extra-infinity-scroll-lazyload.html">Infinity Scroll Lazyload</a></li>
 											<li><a href="portfolio-extra-pagination.html">Pagination</a></li>
 											<li><a href="portfolio-extra-jquery-pagination.html">Pagination Jquery</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Single</a>
-										<ul class="dropdown">
+									<li><a href="#">Single<span class="indicator"><i class="fa fa-angle-right"></i></span></a>
+										<ul class="dropdown" style="">
 											<li><a href="portfolio-details-image.html">With - Image</a></li>
 											<li><a href="portfolio-details-image-gallery.html">With - Image Gallery</a></li>
 											<li><a href="portfolio-details-video-gallery.html">With - Video Gallery</a></li>
@@ -932,16 +910,16 @@
 									</li>
 								</ul>
 							</li>
-							<li><a href="#home">Volunteer</a>
-								<ul class="dropdown">
+							<li><a href="#home">Volunteer<span class="indicator"><i class="fa fa-angle-down"></i></span></a>
+								<ul class="dropdown" style="right: auto; display: none;">
 									<li><a href="page-volunteer-4column.html">Volunteer 4column</a></li>
 									<li><a href="page-volunteer-3column.html">Volunteer 3column</a></li>
 									<li><a href="page-volunteer-2column.html">Volunteer 2column</a></li>
 									<li><a href="page-volunteer-details.html">Volunteer Details</a></li>
 								</ul>
 							</li>
-							<li><a href="javascript:void(0)">Blog</a>
-								<div class="megamenu">
+							<li><a href="javascript:void(0)">Blog<span class="indicator"><i class="fa fa-angle-down"></i></span></a>
+								<div class="megamenu" style="right: 0px; display: none;">
 									<div class="megamenu-row">
 										<div class="col3">
 											<ul class="list-unstyled list-dashed">
@@ -1013,8 +991,8 @@
 									</div>
 								</div>
 							</li>
-							<li><a href="javascript:void(0)">Mega Menu</a>
-								<div class="megamenu">
+							<li><a href="javascript:void(0)">Mega Menu<span class="indicator"><i class="fa fa-angle-down"></i></span></a>
+								<div class="megamenu" style="right: 0px; display: none;">
 									<div class="megamenu-row">
 										<div class="col3">
 											<ul class="list-unstyled list-dashed">
@@ -1075,8 +1053,8 @@
 									</div>
 								</div>
 							</li>
-							<li><a href="javascript:void(0)">Shortcodes</a>
-								<div class="megamenu">
+							<li><a href="javascript:void(0)">Shortcodes<span class="indicator"><i class="fa fa-angle-down"></i></span></a>
+								<div class="megamenu" style="right: 0px; display: none;">
 									<div class="megamenu-row">
 										<div class="col3">
 											<ul class="list-unstyled list-dashed">
@@ -1157,9 +1135,9 @@
 									</div>
 								</div>
 							</li>
-						</ul>
+							<li class="scrollable-fix"></li></ul>
 					</nav>
 				</div>
-			</div>
+			</div><div style="display: none; width: 1519.2px; height: 70.4px; float: none;"></div>
 		</div>
 	</header>

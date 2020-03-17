@@ -19,6 +19,7 @@ Route::get('/', function () {
 //});
 
 Route::match(['get', 'post'], '/causes/{id}', 'CampaignController@causes');
+Route::match(['get', 'post'], 'causes-list', 'CampaignController@causesList');
 Auth::routes();
 Route::get('/home', function () {
     return view('home');
@@ -26,6 +27,7 @@ Route::get('/home', function () {
 Route::get('/khalti', function () {
     return view('khalti');
 });
+Route::match(['get', 'post'], 'causes/{id}/esewa', 'StoreController@create');
 //Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
 {
@@ -35,6 +37,7 @@ Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
     Route::match(['get', 'post'], '/admin/viewCategory/', 'CategoryController@viewCategory');
     Route::match(['get', 'post'], '/admin/addBlog/', 'BlogController@addBlog');
     Route::match(['get', 'post'], '/admin/viewBlog/', 'BlogController@viewBlog');
+    Route::match(['get', 'post'], '/admin/viewCampaign/', 'CampaignController@viewCampaign');
 
 });
 Route::group(['middleware' => 'App\Http\Middleware\DonorMiddleware'], function()
@@ -47,5 +50,6 @@ Route::group(['middleware' => 'App\Http\Middleware\FundraiserMiddleware'], funct
     Route::match(['get', 'post'], '/fundraiser/dashboard/', 'HomeController@fundraiserDashboard');
     Route::match(['get', 'post'], '/fundraiser/addCampaign/', 'CampaignController@addCampaign');
     Route::match(['get', 'post'], '/fundraiser/viewCampaign/', 'CampaignController@viewCampaign');
+    Route::match(['get', 'post'], '/fundraiser/editCampaign/{id}', 'CampaignController@editCampaign');
 
 });

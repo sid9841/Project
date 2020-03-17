@@ -1,10 +1,10 @@
 
 <!-- Footer -->
-<footer id="footer" class="footer pb-0" data-bg-img="images/footer-bg.png" data-bg-color="#25272e">
+<footer id="footer" class="footer pb-0" data-bg-img="{{asset('images/footer-bg.png')}}" data-bg-color="#25272e">
 	<div class="container pb-20">
 		<div class="row multi-row-clearfix">
 			<div class="col-sm-6 col-md-3">
-				<div class="widget dark"> <img alt="" src="images/logo-wide-white.png">
+				<div class="widget dark"> <img alt="" src="{{asset('images/logo-wide-white.png')}}">
 					<p class="font-12 mt-20 mb-10">CharityFund is a library of Crowdfunding and Charity templates with predefined elements which helps you to build your own site. Lorem ipsum dolor sit amet consectetur.</p>
 					<a class="text-gray font-12" href="#"><i class="fa fa-angle-double-right text-theme-colored"></i> Read more</a>
 					<ul class="styled-icons icon-dark mt-20">

@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Campaign;
 use App\category;
 use App\User;
+use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\DB;
 
 class CampaignController extends Controller
 {
@@ -68,6 +70,43 @@ class CampaignController extends Controller
         $category=category::get();
         return view('fundraiser.campaign.addCampaign')->with(compact('category'));
     }
+    public function editCampaign(Request $request,$id=null){
+        if ($request->isMethod('post')) {
+            $data = $request->all();
+            //Upload Image
+            if ($request->hasFile('campaign_image')) {
+                $image_tmp= Input::file('campaign_image');
+                if($image_tmp->isValid()){
+                    $campaign_image=Campaign::where(['id'=>$id])->first();
+                    $image_path='images/campaign/';
+                    if(file_exists($image_path.$campaign_image->image)){
+                        unlink($image_path.$campaign_image->image);
+                    }
+                    $extension = $image_tmp->getClientOriginalExtension();
+                    $filename=rand(111,99999).'.'.$extension;
+                    $image_path='images/campaign/'.$filename;
+                    Image::make($image_tmp)->save($image_path);
+                }
+            }
+            else{
+                $filename=$data['current_image'];
+            }
+
+            Campaign::where(['id'=>$id])->update(['cover_photo_video'=>$filename]);
+            return redirect('/fundraiser/campaign/viewCampaign')->with('flash_message_success','Campaign Updated');
+        }
+        $category=category::get();
+        $campaignDetails=Campaign::where(['id'=>$id])->first();
+        return view('fundraiser.campaign.editCampaign')->with(compact('campaignDetails','category'));
+
+    }
+    public function causesList()
+    {
+        $campaign=DB::table('campaigns')->paginate(4);
+        return view('causes_list')->with(compact('campaign'));
+
+    }
+
     public function causes($id=null){
         if(!empty($id)){
         $cause=campaign::where(['id'=>$id])->first();
@@ -78,9 +117,9 @@ class CampaignController extends Controller
         }
     }
     public function viewCampaign(){
-        $campaign=campaign::get();
-        $count=campaign::count();
-        return view('fundraiser.campaign.viewCampaign')->with(compact('campaign'));
+        $campaigns=campaign::get();
+
+        return view('admin.campaign.viewCampaign')->with(compact('campaigns'));
     }
     /**
      * Store a newly created resource in storage.
@@ -93,6 +132,18 @@ class CampaignController extends Controller
         //
     }
 
+    public function deleteGallery($id=null){
+        if (!empty($id)) {
+            $galleryImage=Gallery::where(['id'=>$id])->first();
+            $image_path='images/backend_images/gallery/';
+            if(file_exists($image_path.$galleryImage->image)){
+                unlink($image_path.$galleryImage->image);
+            }
+            Gallery::where(['id'=>$id])->delete();
+            return redirect()->back()->with('flash_message_success','Gallery Deleted successfully');
+        }
+
+    }
     /**
      * Display the specified resource.
      *
