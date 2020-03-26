@@ -8,7 +8,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Campaign Management</h1>
+                        <h1 class="m-0 text-dark">Campaigns View Management</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -34,43 +34,24 @@
                             <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="example1_length"><label>Show <select name="example1_length" aria-controls="example1" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="example1_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example1"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                                             <thead>
                                             <th>Title</th>
-                                            <th>Description</th>
-                                            <th>Fundraising Type</th>
-                                            <th>Zip Code</th>
-                                            <th>Goal Amount</th>
-                                            <th>Raised Amount</th>
-                                            <th>Category</th>
-                                            <th>Posted By</th>
-                                            <th>Cover Photo Video</th>
-                                            <th>No. of Donors</th>
-                                            <th>No. of Shares</th>
-                                            <th>No. of Followers</th>
-                                            <th>Views</th>
-                                            <th>Created At</th>
-
-                                            <th>Updated At</th>
-                                            <th>Action</th>
+                                            <th>URL</th>
+                                            <th>user_id</th>
+                                            <th>IP</th>
+                                            <th>Country</th>
+                                            <th>City</th>
+                                            <th>Agent</th>
                                             </thead>
                                             <tbody>
 
-                                            @foreach($campaigns as $campaign)
+                                            @foreach($campaign_view as $cv)
                                                 <tr role="row" class="odd">
-                                                    <td class="sorting_1">{{$campaign->title}}</td>
-                                                    <td>{{$campaign->description}}</td>
-                                                    <td>{{$campaign->fundraising_type}}</td>
-                                                    <td>{{$campaign->zip_code}}</td>
-                                                    <td>{{$campaign->goal_amount}}{{$campaign->currency}}</td>
-                                                    <td>{{$campaign->raised}}{{$campaign->currency}}</td>
-
-                                                    <td>{{$campaign->category_id}}</td>
-                                                    <td>{{$campaign->user_id}}</td>
-                                                    <td>{{$campaign->cover_photo_video}}</td>
-                                                    <td>{{$campaign->no_of_donors}}</td>
-                                                    <td>{{$campaign->no_of_shares}}</td>
-                                                    <td>{{$campaign->no_of_followers}}</td>
-                                                    <td>{{count($campaign_view->where('post_id','=',$campaign->id))}}</td>
-                                                    <td>{{$campaign->created_at}}</td>
-                                                    <td>{{$campaign->updated_at}}</td>
+                                                    <td class="sorting_1">{{$cv->title}}</td>
+                                                    <td>{{$cv->url}}</td>
+                                                    <td>{{$cv->user_id}}</td>
+                                                    <td>{{$cv->ip}}</td>
+                                                    <td>{{$cv->country}}</td>
+                                                    <td>{{$cv->city}}</td>
+                                                    <td>{{$cv->agent}}</td>
 
 
 

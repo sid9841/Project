@@ -10,4 +10,6 @@ use Illuminate\Database\Eloquent\Model;
 Class Store extends Model
 {
     use Billable;
+
+    protected $fillable = ['remember_token'];
 }

@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-
-
 	<!-- Meta Tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 	<meta name="description" content="CharityFund - Charity & Crowdfunding HTML Template" />
-	<meta name="keywords" content="building,business,construction,cleaning,transport,workshop" />
-	<meta name="author" content="ThemeMascot" />
 <head>
 	<!-- Page Title -->
 	<title>CrowdFundNepal</title>
 
 	<!-- Favicon and Touch Icons -->
-	<link href="images/favicon.png" rel="shortcut icon" type="image/png">
-	<link href="images/apple-touch-icon.png" rel="apple-touch-icon">
-	<link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
-	<link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
-	<link href="images/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+	<link href="{{asset('images/favicon.png')}}" rel="shortcut icon" type="image/png">
+	<link href="{{asset('images/apple-touch-icon.png')}}" rel="apple-touch-icon">
+	<link href="{{asset('images/apple-touch-icon-72x72.png')}}" rel="apple-touch-icon" sizes="72x72">
+	<link href="{{asset('images/apple-touch-icon-114x114.png')}}" rel="apple-touch-icon" sizes="114x114">
+	<link href="{{asset('images/apple-touch-icon-144x144.png')}}" rel="apple-touch-icon" sizes="144x144">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<!-- Stylesheet -->
 	<link href="{{asset('css/frontendCss/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
 	<link href="{{asset('css/frontendCss/jquery-ui.min.css')}}" rel="stylesheet" type="text/css">
 	<link href="{{asset('css/frontendCss/animate.css')}}" rel="stylesheet" type="text/css">
 	<link href="{{asset('css/frontendCss/css-plugin-collections.css')}}" rel="stylesheet"/>
+
 	<!-- CSS | menuzord megamenu skins -->
 	<link id="menuzord-menu-skins" href="{{asset('css/frontendCss/menuzord-skins/menuzord-boxed.css')}}" rel="stylesheet"/>
 	<script src="https://khalti.com/static/khalti-checkout.js"></script>
@@ -70,33 +67,7 @@
 @yield('content')
 		
 @include('layouts.frontLayout.front_footer')
-	<script>
-		var config = {
-			// replace the publicKey with yours
-			"publicKey": "test_public_key_dc74e0fd57cb46cd93832aee0a390234",
-			"productIdentity": "1234567890",
-			"productName": "Dragon",
-			"productUrl": "http://gameofthrones.wikia.com/wiki/Dragons",
-			"eventHandler": {
-				onSuccess (payload) {
-					// hit merchant api for initiating verfication
-					console.log(payload);
-				},
-				onError (error) {
-					console.log(error);
-				},
-				onClose () {
-					console.log('widget is closing');
-				}
-			}
-		};
 
-		var checkout = new KhaltiCheckout(config);
-		var btn = document.getElementById("payment-button");
-		btn.onclick = function () {
-			checkout.show({amount: 1000});
-		}
-	</script>
 
 
 <!-- Footer Scripts -->
@@ -117,6 +88,6 @@
 <script type="text/javascript" src="{{asset('js/frontendJs/revolution-slider/js/extensions/revolution.extension.video.min.js')}}"></script>
 
 
-</body>
+
 
 </html>

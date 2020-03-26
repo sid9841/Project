@@ -3,8 +3,6 @@
     @include('layouts.frontLayout.front_header')
 @endsection
 @section('content')
-
-
     <!-- Start main-content -->
     <div class="main-content">
         <!-- Section: inner-header -->
@@ -31,43 +29,34 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-9">
-                        @foreach($campaigns as $campaign)
-                        <div class="upcoming-events box-hover-effect effect1 media maxwidth400 bg-light mb-20">
-                            <div class="row equal-height">
-                                <div class="col-sm-4 pr-0 pr-sm-15">
-                                    <div class="thumb p-15">
-                                        <img class="img-fullwidth" src="{{asset('images/campaign/'.$campaign->cover_photo_video)}}" alt="...">
+                        <div class="row">
+                            @foreach($campaigns as $campaign)
+                            <div class="col-sm-6 col-md-4 col-lg-4">
+                                <div class="causes bg-lighter box-hover-effect effect1 maxwidth500 mb-30">
+                                    <div class="thumb">
+                                        <img class="img-fullwidth" alt="" src="{{asset('images/campaign/'.$campaign->cover_photo_video)}}">
                                     </div>
-                                </div>
-                                <div class="col-sm-4 border-right pl-0 pl-sm-15">
-                                    <div class="event-details p-15 mt-20">
-                                        <h4 class="media-heading text-uppercase font-weight-500">{{$campaign->title}}</h4>
-                                        <p>{{$campaign->description}}</p>
-                                        <a href="{{url('causes/'.$campaign->id)}}" class="text-theme-colored">Details <i class="fa fa-angle-double-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="event-count causes p-15 mt-15">
-                                        <div class="progress-item mt-20 mb-40">
-                                            <div class="progress mb-30">
-                                                <div class="progress-bar" data-percent="85"></div>
-                                            </div>
+                                    <div class="progress-item mt-0">
+                                        <div class="progress mb-0">
+                                            <div class="progress-bar" data-percent="84"></div>
                                         </div>
-                                        <ul class="list-inline clearfix">
+                                    </div>
+                                    <div class="causes-details clearfix border-bottom p-15 pt-10">
+                                        <h5><a href="#">{{$campaign->title}}</a></h5>
+                                        <p>{{$campaign->description}}</p>
+                                        <ul class="list-inline clearfix mt-20">
                                             <li class="pull-left pr-0">Raised: {{$campaign->raised}}{{$campaign->currency}}</li>
                                             <li class="text-theme-colored pull-right pr-0">Goal: {{$campaign->goal_amount}}{{$campaign->currency}}</li>
                                         </ul>
                                         <div class="mt-10">
-                                            <ul class="pull-left list-inline mt-15">
-                                                <li class="pr-0"><i class="fa fa-heart-o text-theme-colored"></i> {{$campaign->no_of_donors}} Donors</li>
-                                            </ul>
-                                            <a href="#" class="btn btn-dark btn-flat btn-sm pull-right mt-10">Donate</a>
+                                            <a class="btn btn-dark btn-theme-colored btn-flat btn-sm pull-left mt-10" href="{{url('causes/'.$campaign->id)}}">View</a>
+                                            <div class="pull-right mt-15"><i class="fa fa-heart-o text-theme-colored"></i> {{$campaign->no_of_donors}} Donors</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
-                        @endforeach
                         <div class="row">
                             <div class="col-sm-12">
                                 <nav>
@@ -153,4 +142,4 @@
         </section>
     </div>
     <!-- end main-content -->
-    @endsection
+@endsection

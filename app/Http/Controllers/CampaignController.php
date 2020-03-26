@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Campaign;
 use App\category;
 use App\User;
+use App\CampaignView;
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -102,14 +103,40 @@ class CampaignController extends Controller
     }
     public function causesList()
     {
-        $campaign=DB::table('campaigns')->paginate(4);
-        return view('causes_list')->with(compact('campaign'));
+        $campaigns=DB::table('campaigns')->paginate(4);
+        return view('causes_list')->with(compact('campaigns'));
+
+    }
+    public function causesListCategory($id=null)
+    {
+
+        $campaigns=Campaign::where(['category_id'=>$id])->get();
+        return view('causes_list')->with(compact('campaigns'));
 
     }
 
+    public function causesGridCategory($id=null)
+    {
+
+        $campaigns=Campaign::where(['category_id'=>$id])->get();
+        return view('causes_grid')->with(compact('campaigns'));
+
+    }
+    public function causesGrid()
+    {
+        $campaigns=DB::table('campaigns')->paginate(4);
+        return view('causes_grid')->with(compact('campaigns'));
+
+    }
+    public function viewCampaignViews(){
+        $campaign_view=CampaignView::get();
+
+        return view('admin.campaign.viewCampaignViews')->with(compact('campaign_view'));
+    }
     public function causes($id=null){
         if(!empty($id)){
         $cause=campaign::where(['id'=>$id])->first();
+        CampaignView::createViewLog($cause);
         $user_id=$cause->user_id;
         $user=User::Where(['id'=>$user_id])->First();
         $category=category::Where(['id'=>$cause->category_id])->First();
@@ -118,8 +145,8 @@ class CampaignController extends Controller
     }
     public function viewCampaign(){
         $campaigns=campaign::get();
-
-        return view('admin.campaign.viewCampaign')->with(compact('campaigns'));
+        $campaign_view=CampaignView::get();
+        return view('admin.campaign.viewCampaign')->with(compact('campaigns'))->with(compact('campaign_view'));
     }
     /**
      * Store a newly created resource in storage.

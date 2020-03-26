@@ -14,12 +14,15 @@
 Route::get('/', function () {
     return view('index');
 });
+
+
 //Route::get('/causes', function () {
 //    return view('causes');
 //});
 
 Route::match(['get', 'post'], '/causes/{id}', 'CampaignController@causes');
 Route::match(['get', 'post'], 'causes-list', 'CampaignController@causesList');
+Route::match(['get', 'post'], 'causes-grid', 'CampaignController@causesGrid');
 Auth::routes();
 Route::get('/home', function () {
     return view('home');
@@ -28,6 +31,11 @@ Route::get('/khalti', function () {
     return view('khalti');
 });
 Route::match(['get', 'post'], 'causes/{id}/esewa', 'StoreController@create');
+
+Route::match(['get', 'post'], 'discover', 'CampaignController@causesList');
+Route::match(['get', 'post'], 'discover-grid/{id}', 'CampaignController@causesGridCategory');
+Route::match(['get', 'post'], 'discover/{id}', 'CampaignController@causesListCategory');
+
 //Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
 {
@@ -38,6 +46,7 @@ Route::group(['middleware' => 'App\Http\Middleware\AdminMiddleware'], function()
     Route::match(['get', 'post'], '/admin/addBlog/', 'BlogController@addBlog');
     Route::match(['get', 'post'], '/admin/viewBlog/', 'BlogController@viewBlog');
     Route::match(['get', 'post'], '/admin/viewCampaign/', 'CampaignController@viewCampaign');
+    Route::match(['get', 'post'], '/admin/viewCampaignViews/', 'CampaignController@viewCampaignViews');
 
 });
 Route::group(['middleware' => 'App\Http\Middleware\DonorMiddleware'], function()

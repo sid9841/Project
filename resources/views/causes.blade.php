@@ -88,40 +88,14 @@
 
                                 </div>
                                 <a href="#" class="btn btn-dark btn-flat btn-lg  mt-15" style="width: 100%;" id="payment-button">Donate with Khalti</a>
+                                <button type="button" class="btn btn-dark btn-flat btn-lg  mt-15" style="width: 100%;" data-toggle="modal" data-target="#myModal">Donate With Esewa</button>
 
-
-                                <a href="{{$cause->id}}/esewa" class="btn btn-dark btn-flat btn-lg  mt-15" style="width: 100%;" >Donate with Esewa</a>
 
                             </div>
                             <!-- Trigger the modal with a button -->
-                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
-                            <!-- Modal -->
-                            <div id="myModal" class="modal fade" role="dialog">
-                                <div class="modal-dialog">
 
-                                    <!-- Modal content-->
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Payment</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form>
-                                            <p>Please add the desired AMOUNT</p>
-                                                <input type="text" placeholder="Amount to be Donated">
-                                                <input type="radio">Khalti
-                                                <input type="radio">Esewa
-                                                <button type="submit">Submit</button>
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
 
-                                </div>
-                            </div>
 
                         </div>
                     </div>
@@ -129,7 +103,59 @@
             </div>
         </section>
     </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Payment</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="esewa-payment" name="esewa-payment" action="{{$cause->id}}/esewa" method="post" enctype="multipart/form-data" >{{ csrf_field() }}
+
+                        <p>Please add the desired AMOUNT</p>
+                        <input type="text" name="amount" class="form-control" placeholder="AMOUNT">
+                        <input type="submit" class="btn btn-dark btn-flat btn-lg  mt-15" style="width: 100%;" >Donate with Esewa</input>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <!-- end main-content -->
+    <script>
+        var config = {
+            // replace the publicKey with yours
+            "publicKey": "test_public_key_dc74e0fd57cb46cd93832aee0a390234",
+            "productIdentity": "1234567890",
+            "productName": "Dragon",
+            "productUrl": "http://gameofthrones.wikia.com/wiki/Dragons",
+            "eventHandler": {
+                onSuccess (payload) {
+                    // hit merchant api for initiating verfication
+                    console.log(payload);
+                },
+                onError (error) {
+                    console.log(error);
+                },
+                onClose () {
+                    console.log('widget is closing');
+                }
+            }
+        };
+
+        var checkout = new KhaltiCheckout(config);
+        var btn = document.getElementById("payment-button");
+        btn.onclick = function () {
+            checkout.show({amount: 1000});
+        }
+    </script>
 
 @endsection
