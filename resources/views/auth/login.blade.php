@@ -1,4 +1,7 @@
 @extends('layouts.frontLayout.front_design')
+@section('header')
+    @include('layouts.frontLayout.front_header')
+@endsection
 @section('content')
 
     <!-- Start main-content -->

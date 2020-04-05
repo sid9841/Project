@@ -27,6 +27,21 @@ Auth::routes();
 Route::get('/home', function () {
     return view('home');
 });
+Route::get('/fundraiser/profile', function () {
+    return view('fundraiser/profile');
+});
+
+Route::match(['get', 'post'], '/donate', 'DonationController@addDonation');
+
+Route::match(['get', 'post'], '/search', 'CampaignController@search');
+Route::get('/fundraiser/donation', function () {
+    return view('fundraiser/donation');
+});
+
+Route::get('/fundraiser/updateProfile', function () {
+    return view('fundraiser/update_profile');
+});
+
 Route::get('/khalti', function () {
     return view('khalti');
 });

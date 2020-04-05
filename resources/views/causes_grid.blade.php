@@ -29,6 +29,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-9">
+                     <
                         <div class="row">
                             @foreach($campaigns as $campaign)
                             <div class="col-sm-6 col-md-4 col-lg-4">
@@ -38,7 +39,7 @@
                                     </div>
                                     <div class="progress-item mt-0">
                                         <div class="progress mb-0">
-                                            <div class="progress-bar" data-percent="84"></div>
+                                            <div class="progress-bar" data-percent="{{round(($campaign->raised/$campaign->goal_amount)*100)}}"></div>
                                         </div>
                                     </div>
                                     <div class="causes-details clearfix border-bottom p-15 pt-10">

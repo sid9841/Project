@@ -50,7 +50,7 @@
                                     <div class="event-count causes p-15 mt-15">
                                         <div class="progress-item mt-20 mb-40">
                                             <div class="progress mb-30">
-                                                <div class="progress-bar" data-percent="85"></div>
+                                                <div class="progress-bar" data-percent="{{round(($campaign->raised/$campaign->goal_amount)*100)}}"></div>
                                             </div>
                                         </div>
                                         <ul class="list-inline clearfix">

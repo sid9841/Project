@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Campaign;
+use App\CampaignView;
+use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,8 +29,33 @@ class HomeController extends Controller
     {
         return view('index');
     }
+    public function userCount() {
+        return  User::get()->count();
+}
+    public function campaignCount() {
+        return  Campaign::get()->count();
+    }
+    public function weeklyVisitorCount() {
+        Carbon::setWeekStartsAt(Carbon::SUNDAY);
+        $weeklyVisitors = CampaignView::whereBetween('created_at', [Carbon::now()->startOfWeek(),Carbon::now()->endOfWeek()])
+            ->count();
+        return  $weeklyVisitors;
+    }
+    public function weeklyUserCount() {
+        Carbon::setWeekStartsAt(Carbon::SUNDAY);
+        $weeklyUser = User::whereBetween('created_at', [Carbon::now()->startOfWeek(),Carbon::now()->endOfWeek()])
+            ->count();
+        return  $weeklyUser;
+    }
     public function adminDashboard(){
-        return view('/admin/dashboard');
+
+
+        $userCount = $this->userCount();
+        $campaignCount = $this->campaignCount();
+        $weeklyVisitorCount = $this->weeklyVisitorCount();
+        $weeklyUserCount = $this->weeklyUserCount();
+        $user=User::get();
+        return view('/admin/dashboard')->with(compact(['userCount','campaignCount','weeklyVisitorCount','weeklyUserCount','user']));
     }
     public function fundraiserDashboard(){
         return view('/fundraiser/dashboard');

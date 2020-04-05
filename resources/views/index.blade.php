@@ -394,7 +394,7 @@
                         </div>
                         <div class="progress-item mt-0">
                             <div class="progress mb-0">
-                                <div class="progress-bar" data-percent="84"></div>
+                                <div class="progress-bar" data-percent="{{round(($camp->raised/$camp->goal_amount)*100)}}"></div>
                             </div>
                         </div>
                         <div class="causes-details clearfix border-bottom p-15 pt-10">

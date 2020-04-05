@@ -1,6 +1,13 @@
 <body class="has-side-panel side-panel-left fullwidth-page side-push-panel">
 <div class="body-overlay"></div>
-
+<!-- preloader -->
+<div id="preloader">
+    <div id="spinner">
+        <div class="preloader-dot-loading">
+            <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+        </div>
+    </div>
+S</div>
 <div id="wrapper" class="clearfix">
     <div id="header" class="header">
         <div class="header-nav navbar-fixed-top header-dark navbar-white navbar-transparent navbar-sticky-animated animated-active">
@@ -30,7 +37,12 @@
 
                             </li>
 
-                            <li><a href="#myModal" data-toggle = "modal" data-target= "#myModal" class="nav-link"><i class="fa-search"></i>Search  </a>
+                            <li><div class="md-form mt-0">
+                                    <form method="POST" action="{{ url('search') }}">{{ csrf_field() }}
+                                    <input type="text" placeholder="Search" name="searchTerm" aria-label="Search" style="border-radius: 10%;">
+                                    <button type="submit"><i class="fa-search"></i>Search</button>
+                                    </form>
+                                </div>
 
                             </li>
 

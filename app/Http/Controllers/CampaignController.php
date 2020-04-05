@@ -107,6 +107,15 @@ class CampaignController extends Controller
         return view('causes_list')->with(compact('campaigns'));
 
     }
+    public function search(Request $request){
+        if ($request->isMethod('post')) {
+            $data=$request->all();
+            $searchTerm=$data['searchTerm'];
+            $campaigns = campaign::query()->where('title', 'LIKE', "%{$searchTerm}%")
+                ->orWhere('description', 'LIKE', "%{$searchTerm}%") ->get();
+            return view('causes_list')->with(compact('campaigns'));
+        }
+    }
     public function causesListCategory($id=null)
     {
 
