@@ -13,6 +13,7 @@ class CreateCampaignViewsTable extends Migration
      */
     public function up()
     {
+
         Schema::create("campaign_views", function(Blueprint $table)
         {
             $table->engine = "InnoDB";

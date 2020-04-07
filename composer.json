@@ -10,6 +10,8 @@
         "php": ">=5.6.4",
         "act360/laravel-esewa": "dev-master",
         "anoop/khalti": "dev-master",
+        "consoletvs/charts": "5.*",
+        "hisorange/browser-detect": "^4.2",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "torann/geoip": "^1.0@dev"

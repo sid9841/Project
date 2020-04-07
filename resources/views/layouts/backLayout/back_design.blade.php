@@ -62,6 +62,7 @@
 <!-- ChartJS -->
 <script src="{{asset('plugins/chart.js/Chart.min.js')}}"></script>
 
+
 <!-- PAGE SCRIPTS -->
 <script src="{{asset('dist/js/pages/dashboard2.js')}}"></script>
 </body>

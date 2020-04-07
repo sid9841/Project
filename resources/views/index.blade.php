@@ -377,7 +377,7 @@
             <div class="section-title text-center">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h3 class="text-uppercase mt-0">Our Causes</h3>
+                        <h3 class="text-uppercase mt-0">Popular causes</h3>
                         <div class="title-icon">
                             <i class="flaticon-charity-hand-holding-a-heart"></i>
                         </div>
@@ -656,13 +656,13 @@
         </div>
     </section>
 
-    <!-- Section: Volunteer -->
+    <!-- Section: Causes -->
     <section>
-        <div class="container">
+        <div class="container pb-80">
             <div class="section-title text-center">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h3 class="text-uppercase mt-0">Our Volunteers</h3>
+                        <h3 class="text-uppercase mt-0">Our Causes</h3>
                         <div class="title-icon">
                             <i class="flaticon-charity-hand-holding-a-heart"></i>
                         </div>
@@ -670,93 +670,33 @@
                     </div>
                 </div>
             </div>
-            <div class="section-content">
-                <div class="row multi-row-clearfix">
-                    <div class="col-md-12 text-left sm-text-center">
-                        <div class="volunteers-carousel owl-nav-top" data-dots="true">
-                            <div class="item">
-                                <div class="volunteer maxwidth400">
-                                    <div class="thumb"><img alt="" src="images/team/team1.jpg" class="img-fullwidth"></div>
-                                    <div class="overlay">
-                                        <div class="content text-center">
-                                            <h4 class="author mb-0"><a href="#" class="text-white">Alex Jacobson</a></h4>
-                                            <h6 class="title text-black font-14 mt-5 mb-15">Joined: May, 15</h6>
-                                            <ul class="styled-icons icon-gray icon-sm mt-10">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+            <div class="row mtli-row-clearfix">
+                @foreach($campaign as $camp)
+                    <div class="col-sm-6 col-md-3 col-lg-3">
+                        <div class="causes bg-lighter box-hover-effect effect1 maxwidth500 mb-sm-30">
+                            <div class="thumb">
+                                <img class="img-fullwidth" alt="" src="images/campaign/{{$camp->cover_photo_video}}">
+                            </div>
+                            <div class="progress-item mt-0">
+                                <div class="progress mb-0">
+                                    <div class="progress-bar" data-percent="{{round(($camp->raised/$camp->goal_amount)*100)}}"></div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="volunteer maxwidth400">
-                                    <div class="thumb"><img alt="" src="images/team/team2.jpg" class="img-fullwidth"></div>
-                                    <div class="overlay">
-                                        <div class="content text-center">
-                                            <h4 class="author mb-0"><a href="#" class="text-white">Alex Jacobson</a></h4>
-                                            <h6 class="title text-black font-14 mt-5 mb-15">Joined: May, 15</h6>
-                                            <ul class="styled-icons icon-gray icon-sm mt-10">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="volunteer maxwidth400">
-                                    <div class="thumb"><img alt="" src="images/team/team3.jpg" class="img-fullwidth"></div>
-                                    <div class="overlay">
-                                        <div class="content text-center">
-                                            <h4 class="author mb-0"><a href="#" class="text-white">Alex Jacobson</a></h4>
-                                            <h6 class="title text-black font-14 mt-5 mb-15">Joined: May, 15</h6>
-                                            <ul class="styled-icons icon-gray icon-sm mt-10">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="volunteer maxwidth400">
-                                    <div class="thumb"><img alt="" src="images/team/team4.jpg" class="img-fullwidth"></div>
-                                    <div class="overlay">
-                                        <div class="content text-center">
-                                            <h4 class="author mb-0"><a href="#" class="text-white">Alex Jacobson</a></h4>
-                                            <h6 class="title text-black font-14 mt-5 mb-15">Joined: May, 15</h6>
-                                            <ul class="styled-icons icon-gray icon-sm mt-10">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="volunteer maxwidth400">
-                                    <div class="thumb"><img alt="" src="images/team/team1.jpg" class="img-fullwidth"></div>
-                                    <div class="overlay">
-                                        <div class="content text-center">
-                                            <h4 class="author mb-0"><a href="#" class="text-white">Alex Jacobson</a></h4>
-                                            <h6 class="title text-black font-14 mt-5 mb-15">Joined: May, 15</h6>
-                                            <ul class="styled-icons icon-gray icon-sm mt-10">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                            <div class="causes-details clearfix border-bottom p-15 pt-10">
+                                <h5><a href="causes/{{$camp->id}}">{{$camp->title}}</a></h5>
+                                <p>{{$camp->description}}</p>
+                                <ul class="list-inline clearfix mt-20">
+                                    <li class="pull-left pr-0">Raised: {{$camp->currency}}{{$camp->raised}}</li>
+                                    <li class="text-theme-colored pull-right pr-0">Goal: {{$camp->currency}}{{$camp->goal_amount}}</li>
+                                </ul>
+                                <div class="mt-10">
+                                    <a class="btn btn-dark btn-theme-colored btn-flat btn-sm pull-left mt-10" href="#">Donate</a>
+                                    <div class="pull-right mt-15"><i class="fa fa-heart-o text-theme-colored"></i> {{$camp->no_of_donors}} Donors</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

@@ -164,6 +164,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         \Torann\GeoIP\GeoIPServiceProvider::class,
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
 
 
         /*
@@ -229,6 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'GeoIP' => \Torann\GeoIP\Facades\GeoIP::class,
+        'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
 
     ],
 
