@@ -37,36 +37,37 @@
                         </button>
                         </a>
                         @else
-                        <div class="col-md-6 col-md-push-3">
-                            <table class="table">
-                                <thead class="thead-dark">
-                                <tr>
-                                <th>Name</th>
-                                <th>Description</th>
-                                    <th>Goal Amount</th>
-                                    <th>Raised Amount</th>
-                                    <th>Donors</th>
-                                    <th>Shares</th>
-                                    <th>Followers</th>
-                                </tr>
-                                </thead>
-                                <tbody>
+                        <div class="col-md-12 ">
+
                                 @foreach($campaign as $camp)
                                 @if($camp->user_id==Auth::user()->id)
-                                <tr>
-                                    <td>{{$camp->title}}</td>
-                                    <td>{{$camp->description}}</td>
-                                    <td>{{$camp->goal_amount}} {{$camp->currency}}</td>
-                                    <td>{{$camp->raised}} {{$camp->currency}}</td>
-                                    <td>{{$camp->no_of_donors}}</td>
-                                    <td>{{$camp->no_of_shares}}</td>
-                                    <td>{{$camp->no_of_followers}}</td>
-
-                                </tr>
+                                    <div class="col-sm-6 col-md-3 col-lg-3">
+                                        <div class="causes bg-lighter box-hover-effect effect1 maxwidth500 mb-sm-30">
+                                            <div class="thumb">
+                                                <img class="img-fullwidth" alt="" src="{{asset('images/campaign/'.$camp->cover_photo_video)}}">
+                                            </div>
+                                            <div class="progress-item mt-0">
+                                                <div class="progress mb-0">
+                                                    <div class="progress-bar" data-percent="{{round(($camp->raised/$camp->goal_amount)*100)}}"></div>
+                                                </div>
+                                            </div>
+                                            <div class="causes-details clearfix border-bottom p-15 pt-10">
+                                                <h5><a href="causes/{{$camp->id}}">{{$camp->title}}</a></h5>
+                                                <p>{{$camp->description}}</p>
+                                                <ul class="list-inline clearfix mt-20">
+                                                    <li class="pull-left pr-0">Raised: {{$camp->currency}}{{$camp->raised}}</li>
+                                                    <li class="text-theme-colored pull-right pr-0">Goal: {{$camp->currency}}{{$camp->goal_amount}}</li>
+                                                </ul>
+                                                <div class="mt-10">
+                                                    <a class="btn btn-dark btn-theme-colored btn-flat btn-sm pull-left mt-10" href="#">Donate</a>
+                                                    <div class="pull-right mt-15"><i class="fa fa-heart-o text-theme-colored"></i> {{$camp->no_of_donors}} Donors</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 @endif
                                     @endforeach
-                                </tbody>
-                            </table>
+                        </div>
                         @endif
 
                     </div>

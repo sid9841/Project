@@ -13,6 +13,7 @@ S</div>
         <div class="header-nav navbar-fixed-top header-dark navbar-white navbar-transparent navbar-sticky-animated animated-active">
             <div class="header-nav-wrapper">
                 <div class="container pt-10 pb-10">
+                    @if (Auth::guest())
                     <nav id="menuzord-right" class="menuzord orange menuzord-responsive"><a href="javascript:void(0)" class="showhide" style="display: none;"><em></em><em></em><em></em></a>
                         <a class="menuzord-brand" href="javascript:void(0)">
                             <img src="images/logo-wide.png" alt="">
@@ -40,7 +41,7 @@ S</div>
                             <li><div class="md-form mt-0">
                                     <form method="POST" action="{{ url('search') }}">{{ csrf_field() }}
                                     <input type="text" placeholder="Search" name="searchTerm" aria-label="Search" style="border-radius: 10%;">
-                                    <button type="submit"><i class="fa-search"></i>Search</button>
+                                    <button type="submit" style="margin-left: 0px;"><i class="fa fa-search"></i></button>
                                     </form>
                                 </div>
 
@@ -51,6 +52,69 @@ S</div>
                         </ul>
 
                     </nav>
+                    @else
+                        <nav id="menuzord-right" class="menuzord orange menuzord-responsive"><a href="javascript:void(0)" class="showhide" style="display: none;"><em></em><em></em><em></em></a>
+                            <a class="menuzord-brand" href="javascript:void(0)">
+                                <img src="{{asset('images/logo-wide.png')}}" alt="">
+                            </a>
+                            <ul class="menuzord-menu menuzord-left menuzord-indented " style="max-height: 400px;">
+
+                                <li>
+                                    <a href="#" class="" data-toggle="dropdown" role="button" aria-expanded="false">
+                                        {{ Auth::user()->name }}
+                                    </a>
+
+                                    <ul class="dropdown" role="menu">
+                                        <li>
+                                            <a href="{{ url('/fundraiser/dashboard/') }}">
+                                                My Campaigns
+                                            </a>
+
+
+                                        </li>
+                                        <li>
+                                            <a href="{{ url('/fundraiser/dashboard/') }}">
+                                                My Donations
+                                            </a>
+
+
+                                        </li>
+                                        <li>
+                                            <a href="{{ url('/fundraiser/profile/') }}">
+                                                View Profile
+                                            </a>
+
+
+                                        </li>
+                                        <li>
+                                            <a href="{{ url('/fundraiser/updateProfile/') }}">
+                                                Update Profile
+                                            </a>
+
+
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                Logout
+                                            </a>
+
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                {{ csrf_field() }}
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+
+                                <li class="scrollable-fix"></li>
+                            </ul>
+
+                        </nav>
+
+                    @endif
 
                 </div>
             </div>

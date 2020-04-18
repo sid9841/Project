@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
+Route::match(['get', 'post'], '/', 'CampaignController@viewIndex');
 
 //Route::get('/causes', function () {
 //    return view('causes');

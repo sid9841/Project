@@ -42,7 +42,7 @@
 					@if (Auth::guest())
 						<nav id="menuzord-right" class="menuzord orange menuzord-responsive"><a href="javascript:void(0)" class="showhide" style="display: none;"><em></em><em></em><em></em></a>
 							<a class="menuzord-brand" href="javascript:void(0)">
-								<img src="{{asset('images/logo-wide.png')}}" alt="">
+								<img src="images/logo-wide.png" alt="">
 							</a>
 							<ul class="menuzord-menu menuzord-left menuzord-indented " style="max-height: 400px;">
 								<li class="active"><a href="{{url('/')}}">Home</a>
@@ -64,7 +64,12 @@
 
 								</li>
 
-								<li><a href="#myModal" data-toggle = "modal" data-target= "#myModal" class="nav-link"><i class="fa-search"></i>Search  </a>
+								<li><div class="md-form mt-0">
+										<form method="POST" action="{{ url('search') }}">{{ csrf_field() }}
+											<input type="text" placeholder="Search" name="searchTerm" aria-label="Search" style="border-radius: 10%;">
+											<button type="submit" style="margin-left: 0px;"><i class="fa fa-search"></i></button>
+										</form>
+									</div>
 
 								</li>
 

@@ -31,7 +31,7 @@
                     <div class="col-md-6 col-md-push-3">
                         <h4 class="text-gray mt-0 pt-5"> Login</h4>
                         <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+
                         <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                             {{ csrf_field() }}
 
@@ -74,10 +74,7 @@
                             <div class="clear text-center pt-10">
                                 <a class="text-theme-colored font-weight-600 font-12" href="{{ route('password.request') }}">Forgot Your Password?</a>
                             </div>
-                            <div class="clear text-center pt-10">
-                                <a class="btn btn-dark btn-lg btn-block no-border mt-15 mb-15" href="#" style="background-color: #3b5998;" >Login with facebook</a>
-                                <a class="btn btn-dark btn-lg btn-block no-border" href="#" style="background-color: #00acee;">Login with twitter</a>
-                            </div>
+
                         </form>
                     </div>
                 </div>

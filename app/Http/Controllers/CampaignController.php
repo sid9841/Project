@@ -287,18 +287,17 @@ class CampaignController extends Controller
     }
     public function viewIndex(){
         $location=$this->getLocation();
-        $trending = DB::table("campaign_views")
-            ->select(
-                DB::raw("DISTINCT(post_id),COUNT(*) as total_views"))
-            ->groupBy('country')
-            ->get();
 
-        print_r($trending);
-        foreach ($trending as $tren){
-            echo $tren->country;
-        }
-        die;
-        return view('index')->with(compact('location'));
+        $trending = DB::table("campaign_views")
+            ->join('campaigns','campaigns.id','=','campaign_views.post_id')
+            ->select(
+                DB::raw("campaigns.*,campaign_views.country,COUNT(*) as total_views"))
+            ->where('campaign_views.country','=',$location[1])
+            ->groupBy('post_id')
+            ->orderBy('total_views','desc')
+            ->paginate(4);
+
+        return view('index')->with(compact('location','trending'));
     }
 
 

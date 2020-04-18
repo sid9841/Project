@@ -28,7 +28,7 @@
 			</div>
 			<div class="col-sm-6 col-md-3">
 				<div class="widget dark">
-					<h5 class="widget-title line-bottom">Latest News</h5>
+					<h5 class="widget-title line-bottom">Site Links</h5>
 					<div class="latest-posts">
 						<article class="post media-post clearfix pb-0 mb-10">
 							<a class="post-thumb" href="#"><img src="https://placehold.it/80x55" alt=""></a>
@@ -80,7 +80,7 @@
 	<div class="container-fluid bg-theme-colored p-20">
 		<div class="row text-center">
 			<div class="col-md-12">
-				<p class="text-white font-11 m-0">Copyright &copy;2015 ThemeMascot. All Rights Reserved</p>
+				<p class="text-white font-11 m-0">Copyright &copy;2020. All Rights Reserved</p>
 			</div>
 		</div>
 	</div>

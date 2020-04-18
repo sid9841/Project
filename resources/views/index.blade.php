@@ -377,7 +377,7 @@
             <div class="section-title text-center">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h3 class="text-uppercase mt-0">Popular causes</h3>
+                        <h3 class="text-uppercase mt-0">Popular causes in {{$location[0]}}</h3>
                         <div class="title-icon">
                             <i class="flaticon-charity-hand-holding-a-heart"></i>
                         </div>
@@ -671,7 +671,7 @@
                 </div>
             </div>
             <div class="row mtli-row-clearfix">
-                @foreach($campaign as $camp)
+                @foreach($trending as $camp)
                     <div class="col-sm-6 col-md-3 col-lg-3">
                         <div class="causes bg-lighter box-hover-effect effect1 maxwidth500 mb-sm-30">
                             <div class="thumb">
